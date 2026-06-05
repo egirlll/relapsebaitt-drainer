@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "RelapseBaitt Auto-Drain",
+  "version": "1.0",
+  "description": "Auto-drain extension for RelapseBaitt's Throne",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["https://throne.com/relapsebaitt/*"],
+  "icons": {
+    "16": "icons/icon.png",
+    "32": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon.png",
+      "32": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    },
+    "default_title": "RelapseBaitt Auto-Drain~"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://throne.com/relapsebaitt*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
